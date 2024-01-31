@@ -69,7 +69,8 @@ class HealthPing:
         Begins running a health ping schedule.
         """
         if self.__timer is not None:
-            self.__logger.info("HealthPing schedule already running!")
+            if self.__logger:
+                self.__logger.info("HealthPing schedule already running!")
             return
         self.__stopped_flag = False
         self._create_timer(self._get_seconds_to_next_job())
@@ -81,7 +82,8 @@ class HealthPing:
         Stops existing health ping schedule.
         """
         if self.__timer is None:
-            self.__logger.info("No HealthPing schedule running!")
+            if self.__logger:
+                self.__logger.info("No HealthPing schedule running!")
             return
 
         self.__timer.cancel()
