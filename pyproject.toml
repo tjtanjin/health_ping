@@ -15,7 +15,7 @@ pythonpath = [
 
 [project]
 name = "health_ping"
-version = "1.0.0"
+version = "1.0.1"
 authors = [
   { name="tjtanjin", email="cjtanjin@gmail.com" },
 ]

@@ -24,7 +24,7 @@ HealthPing(url="https://hc-ping.com/<id>", timezone="UTC+08:00", schedule="1 * *
 ```
 **HealthPing** essentially adopts the "deadman switch" approach, where it regularly sends a "heartbeat" to a monitoring service such as [Healthchecks.io](https://healthchecks.io/). If a "heartbeat" does not arrive within a scheduled period, the service is assumed dead and an alert (e.g. email notification) is then sent out to the service owner.
 
-**HealthPing** is published on [**pypi**](https://pypi.org/project/health-ping/1.0.0/) and can be easily installed with:
+**HealthPing** is published on [**pypi**](https://pypi.org/project/health-ping/) and can be easily installed with:
 ```
 python3 -m pip install health_ping
 ```
