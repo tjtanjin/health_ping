@@ -33,7 +33,7 @@ class HealthPing:
     :param debug: whether to run in debug mode
     """
     def __init__(self, url, method="GET", headers={}, body={}, timezone=get_system_timezone(),
-                 schedule="* * * * *", retries=[], pre_fire=None, post_fire=None, log_file=None,
+                 schedule="0 * * * *", retries=[], pre_fire=None, post_fire=None, log_file=None,
                  debug=False):
 
         # url cannot be empty
