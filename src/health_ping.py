@@ -31,7 +31,6 @@ class HealthPing:
     :param post_fire: function called after a scheduled health ping
     :param log_file: whether to store a history of scheduled pings
     :param debug: whether to run in debug mode
-    :param result: object containing result of a call
     """
     def __init__(self, url, method="GET", headers={}, body={}, timezone=get_system_timezone(),
                  schedule="* * * * *", retries=[], pre_fire=None, post_fire=None, log_file=None,
@@ -53,6 +52,8 @@ class HealthPing:
         self.post_fire = post_fire
         self.log_file = log_file
         self.debug = debug
+
+        # ping result
         self.result = None
 
         # internal use
