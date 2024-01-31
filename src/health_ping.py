@@ -112,7 +112,7 @@ class HealthPing:
             with urllib.request.urlopen(request) as response:
                 self.result = PingResult(success=True, data=response.read().decode('utf-8'))
             self.__retry_count = 0
-        except (URLError, HTTPError) as e:
+        except (URLError, HTTPError, ValueError) as e:
             self.result = PingResult(success=False, data=e)
             is_retry = (
                 self.__retry_count < len(self.retries) and
